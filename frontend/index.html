@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat Boy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header with navigation -->
+  <header>
+    <div class="container">
+      <h1>Chat Boy</h1>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Chat Section -->
+  <div id="chatSection">
+    <!-- Online Counter -->
+    <div id="onlineCounter">Users online: 0</div>
+
+    <!-- Chat Window -->
+    <div id="chat"></div>
+    <p id="typing"></p>
+
+    <!-- Input Area -->
+    <div id="inputRow">
+      <div id="leftButtons">
+        <button id="skipBtn" class="btn">Skip <span class="material-icons">skip_next</span></button>
+        <button id="newChatBtn" class="btn">New Chat <span class="material-icons">refresh</span></button>
+      </div>
+      <div id="inputContainer">
+        <input type="text" id="message" placeholder="Type your message..." autocomplete="off" />
+        <button id="send" class="btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Socket.IO Script -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
